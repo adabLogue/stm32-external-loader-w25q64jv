@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspace>
     <project>
-        <path>$WS_DIR$\MT25TL01G_STM32H747I-EVAL.ewp</path>
+        <path>$WS_DIR$\W25Q64JV_STM32H750B-DK.ewp</path>
     </project>
     <batchBuild />
 </workspace>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-    <fileVersion>4</fileVersion>
+    <fileVersion>3</fileVersion>
     <configuration>
         <name>Debug</name>
         <toolchain>
@@ -11,13 +11,9 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>37</version>
+                <version>31</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
-                <option>
-                    <name>BrowseInfoPath</name>
-                    <state>Debug\BrowseInfo</state>
-                </option>
                 <option>
                     <name>ExePath</name>
                     <state>Debug\Exe</state>
@@ -62,7 +58,7 @@
                 </option>
                 <option>
                     <name>RTDescription</name>
-                    <state>A compact configuration of the C/C++14 runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod.</state>
+                    <state>Use the normal configuration of the C/C++ runtime library. No locale interface, C locale, no file descriptor support, no multibytes in printf and scanf, and no hex floats in strtod.</state>
                 </option>
                 <option>
                     <name>OGProductVersion</name>
@@ -70,11 +66,19 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>9.70.1.13552</state>
+                    <state>8.50.9.33458</state>
+                </option>
+                <option>
+                    <name>GeneralEnableMisra</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GeneralMisraVerbose</name>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>OGChipSelectEditMenu</name>
-                    <state>STM32H750B-DK	ST STM32H750B-DK</state>
+                    <state>STM32H747I-EVAL_M7	ST STM32H747I-EVAL_M7</state>
                 </option>
                 <option>
                     <name>GenLowLevelInterface</name>
@@ -93,12 +97,26 @@
                     <state>0</state>
                 </option>
                 <option>
+                    <name>GeneralMisraRules98</name>
+                    <version>0</version>
+                    <state>1000111110110101101110011100111111101110011011000101110111101101100111111111111100110011111001110111001111111111111111111111111</state>
+                </option>
+                <option>
+                    <name>GeneralMisraVer</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GeneralMisraRules04</name>
+                    <version>0</version>
+                    <state>111101110010111111111000110111111111111111111111111110010111101111010101111111111111111111111111101111111011111001111011111011111111111111111</state>
+                </option>
+                <option>
                     <name>RTConfigPath2</name>
                     <state>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</state>
                 </option>
                 <option>
                     <name>GBECoreSlave</name>
-                    <version>35</version>
+                    <version>28</version>
                     <state>41</state>
                 </option>
                 <option>
@@ -115,12 +133,12 @@
                 </option>
                 <option>
                     <name>CoreVariant</name>
-                    <version>35</version>
+                    <version>28</version>
                     <state>41</state>
                 </option>
                 <option>
                     <name>GFPUDeviceSlave</name>
-                    <state>STM32H750B-DK	ST STM32H750B-DK</state>
+                    <state>STM32H747I-EVAL_M7	ST STM32H747I-EVAL_M7</state>
                 </option>
                 <option>
                     <name>FPU2</name>
@@ -138,7 +156,7 @@
                 </option>
                 <option>
                     <name>GFPUCoreSlave2</name>
-                    <version>35</version>
+                    <version>28</version>
                     <state>41</state>
                 </option>
                 <option>
@@ -191,42 +209,13 @@
                     <version>0</version>
                     <state>0</state>
                 </option>
-                <option>
-                    <name>OGAarch64Abi</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>OG_32_64Device</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>BuildFilesPath</name>
-                    <state>Debug</state>
-                </option>
-                <option>
-                    <name>PointerAuthentication</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>FPU64</name>
-                    <state>1</state>
-                </option>
-                <option>
-                    <name>OG_32_64DeviceCoreSlave</name>
-                    <version>35</version>
-                    <state>41</state>
-                </option>
-                <option>
-                    <name>GOutputSo</name>
-                    <state>0</state>
-                </option>
             </data>
         </settings>
         <settings>
             <name>ICCARM</name>
             <archiveVersion>2</archiveVersion>
             <data>
-                <version>40</version>
+                <version>36</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -351,11 +340,14 @@
                     <state></state>
                 </option>
                 <option>
+                    <name>CompilerMisraOverride</name>
+                    <state>0</state>
+                </option>
+                <option>
                     <name>CCIncludePath2</name>
                     <state>$PROJ_DIR$\..\..\Includes\CMSIS</state>
                     <state>$PROJ_DIR$\..\..\Includes\Library</state>
                     <state>$PROJ_DIR$\..\..\Includes\Loader</state>
-                    <state>$PROJ_DIR$\..\..\..\..\..\..\STM32Cube\Repository\STM32CubeH7\Drivers\STM32H7xx_HAL_Driver\Inc </state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -381,6 +373,16 @@
                 <option>
                     <name>CCOptLevelSlave</name>
                     <state>1</state>
+                </option>
+                <option>
+                    <name>CompilerMisraRules98</name>
+                    <version>0</version>
+                    <state>1000111110110101101110011100111111101110011011000101110111101101100111111111111100110011111001110111001111111111111111111111111</state>
+                </option>
+                <option>
+                    <name>CompilerMisraRules04</name>
+                    <version>0</version>
+                    <state>111101110010111111111000110111111111111111111111111110010111101111010101111111111111111111111111101111111011111001111011111011111111111111111</state>
                 </option>
                 <option>
                     <name>CCPosIndRopi</name>
@@ -471,37 +473,13 @@
                     <name>CCStackProtection</name>
                     <state>0</state>
                 </option>
-                <option>
-                    <name>CCPointerAutentiction</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>CCBranchTargetIdentification</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>CCPosRadRwpi</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>CCPosSharedSlave</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>CCUseIarExtensions</name>
-                    <state>1</state>
-                </option>
-                <option>
-                    <name>CCUseGnuExtensions</name>
-                    <state>0</state>
-                </option>
             </data>
         </settings>
         <settings>
             <name>AARM</name>
             <archiveVersion>2</archiveVersion>
             <data>
-                <version>12</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -661,10 +639,6 @@
                     <name>PreInclude</name>
                     <state></state>
                 </option>
-                <option>
-                    <name>A_32_64Device</name>
-                    <state>1</state>
-                </option>
             </data>
         </settings>
         <settings>
@@ -685,7 +659,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>W25Q64JV_STM32H750B-DK.srec</state>
+                    <state></state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -699,18 +673,31 @@
         </settings>
         <settings>
             <name>CUSTOM</name>
-            <archiveVersion>4</archiveVersion>
+            <archiveVersion>3</archiveVersion>
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <buildSequence>inputOutputBased</buildSequence>
+                <hasPrio>0</hasPrio>
+            </data>
+        </settings>
+        <settings>
+            <name>BICOMP</name>
+            <archiveVersion>0</archiveVersion>
+            <data />
+        </settings>
+        <settings>
+            <name>BUILDACTION</name>
+            <archiveVersion>1</archiveVersion>
+            <data>
+                <prebuild></prebuild>
+                <postbuild></postbuild>
             </data>
         </settings>
         <settings>
             <name>ILINK</name>
             <archiveVersion>0</archiveVersion>
             <data>
-                <version>28</version>
+                <version>23</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -718,12 +705,16 @@
                     <state>1</state>
                 </option>
                 <option>
+                    <name>XLinkMisraHandler</name>
+                    <state>0</state>
+                </option>
+                <option>
                     <name>IlinkInputFileSlave</name>
                     <state>0</state>
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>W25Q64JV_STM32H750B-DK.stldr</state>
+                    <state>MT25TL01G_STM32H747I-EVAL.stldr</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>
@@ -787,7 +778,7 @@
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>C:\Users\hp\Desktop\Personal_Workspace\stm32-external-loader-w25q64jv\STM32H7x_boards\W25Q64JV_STM32H750B-DK\Project\EWARM\Target.icf</state>
+                    <state>C:\Users\fedi bouzazi\Desktop\3-15\Git\Project\EWARM\Target.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -1042,53 +1033,13 @@
                     <name>IlinkRawBinaryAlign2</name>
                     <state></state>
                 </option>
-                <option>
-                    <name>IlinkLogCrtRoutineSelection</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkLogFragmentInfo</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkLogInlining</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkLogMerging</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkDemangle</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkWrapperFileEnable</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkWrapperFile</name>
-                    <state></state>
-                </option>
-                <option>
-                    <name>IlinkProcessor</name>
-                    <state>1</state>
-                </option>
-                <option>
-                    <name>IlinkFpuProcessor</name>
-                    <state>1</state>
-                </option>
-                <option>
-                    <name>IlinkSharedSlave</name>
-                    <state>0</state>
-                </option>
             </data>
         </settings>
         <settings>
             <name>IARCHIVE</name>
             <archiveVersion>0</archiveVersion>
             <data>
-                <version>1</version>
+                <version>0</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>1</debug>
                 <option>
@@ -1103,19 +1054,11 @@
                     <name>IarchiveOutput</name>
                     <state>###Unitialized###</state>
                 </option>
-                <option>
-                    <name>IarchiveExtraOptionsCheck</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IarchiveExtraOptions</name>
-                    <state></state>
-                </option>
             </data>
         </settings>
         <settings>
-            <name>BUILDACTION</name>
-            <archiveVersion>2</archiveVersion>
+            <name>BILINK</name>
+            <archiveVersion>0</archiveVersion>
             <data />
         </settings>
     </configuration>
@@ -1129,13 +1072,9 @@
             <name>General</name>
             <archiveVersion>3</archiveVersion>
             <data>
-                <version>37</version>
+                <version>31</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
-                <option>
-                    <name>BrowseInfoPath</name>
-                    <state>Release\BrowseInfo</state>
-                </option>
                 <option>
                     <name>ExePath</name>
                     <state>Release\Exe</state>
@@ -1188,7 +1127,15 @@
                 </option>
                 <option>
                     <name>OGLastSavedByProductVersion</name>
-                    <state>9.70.1.13552</state>
+                    <state></state>
+                </option>
+                <option>
+                    <name>GeneralEnableMisra</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GeneralMisraVerbose</name>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>OGChipSelectEditMenu</name>
@@ -1211,12 +1158,26 @@
                     <state>0</state>
                 </option>
                 <option>
+                    <name>GeneralMisraRules98</name>
+                    <version>0</version>
+                    <state>1000111110110101101110011100111111101110011011000101110111101101100111111111111100110011111001110111001111111111111111111111111</state>
+                </option>
+                <option>
+                    <name>GeneralMisraVer</name>
+                    <state>0</state>
+                </option>
+                <option>
+                    <name>GeneralMisraRules04</name>
+                    <version>0</version>
+                    <state>111101110010111111111000110111111111111111111111111110010111101111010101111111111111111111111111101111111011111001111011111011111111111111111</state>
+                </option>
+                <option>
                     <name>RTConfigPath2</name>
                     <state></state>
                 </option>
                 <option>
                     <name>GBECoreSlave</name>
-                    <version>35</version>
+                    <version>28</version>
                     <state>38</state>
                 </option>
                 <option>
@@ -1233,7 +1194,7 @@
                 </option>
                 <option>
                     <name>CoreVariant</name>
-                    <version>35</version>
+                    <version>28</version>
                     <state>38</state>
                 </option>
                 <option>
@@ -1256,7 +1217,7 @@
                 </option>
                 <option>
                     <name>GFPUCoreSlave2</name>
-                    <version>35</version>
+                    <version>28</version>
                     <state>38</state>
                 </option>
                 <option>
@@ -1309,42 +1270,13 @@
                     <version>0</version>
                     <state>0</state>
                 </option>
-                <option>
-                    <name>OGAarch64Abi</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>OG_32_64Device</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>BuildFilesPath</name>
-                    <state>Release</state>
-                </option>
-                <option>
-                    <name>PointerAuthentication</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>FPU64</name>
-                    <state>1</state>
-                </option>
-                <option>
-                    <name>OG_32_64DeviceCoreSlave</name>
-                    <version>35</version>
-                    <state>38</state>
-                </option>
-                <option>
-                    <name>GOutputSo</name>
-                    <state>0</state>
-                </option>
             </data>
         </settings>
         <settings>
             <name>ICCARM</name>
             <archiveVersion>2</archiveVersion>
             <data>
-                <version>40</version>
+                <version>36</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
@@ -1469,6 +1401,10 @@
                     <state></state>
                 </option>
                 <option>
+                    <name>CompilerMisraOverride</name>
+                    <state>0</state>
+                </option>
+                <option>
                     <name>CCIncludePath2</name>
                     <state></state>
                 </option>
@@ -1496,6 +1432,16 @@
                 <option>
                     <name>CCOptLevelSlave</name>
                     <state>1</state>
+                </option>
+                <option>
+                    <name>CompilerMisraRules98</name>
+                    <version>0</version>
+                    <state>1000111110110101101110011100111111101110011011000101110111101101100111111111111100110011111001110111001111111111111111111111111</state>
+                </option>
+                <option>
+                    <name>CompilerMisraRules04</name>
+                    <version>0</version>
+                    <state>111101110010111111111000110111111111111111111111111110010111101111010101111111111111111111111111101111111011111001111011111011111111111111111</state>
                 </option>
                 <option>
                     <name>CCPosIndRopi</name>
@@ -1586,37 +1532,13 @@
                     <name>CCStackProtection</name>
                     <state>0</state>
                 </option>
-                <option>
-                    <name>CCPointerAutentiction</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>CCBranchTargetIdentification</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>CCPosRadRwpi</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>CCPosSharedSlave</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>CCUseIarExtensions</name>
-                    <state>1</state>
-                </option>
-                <option>
-                    <name>CCUseGnuExtensions</name>
-                    <state>0</state>
-                </option>
             </data>
         </settings>
         <settings>
             <name>AARM</name>
             <archiveVersion>2</archiveVersion>
             <data>
-                <version>12</version>
+                <version>11</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
@@ -1776,10 +1698,6 @@
                     <name>PreInclude</name>
                     <state></state>
                 </option>
-                <option>
-                    <name>A_32_64Device</name>
-                    <state>1</state>
-                </option>
             </data>
         </settings>
         <settings>
@@ -1814,23 +1732,40 @@
         </settings>
         <settings>
             <name>CUSTOM</name>
-            <archiveVersion>4</archiveVersion>
+            <archiveVersion>3</archiveVersion>
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <buildSequence>inputOutputBased</buildSequence>
+                <hasPrio>0</hasPrio>
+            </data>
+        </settings>
+        <settings>
+            <name>BICOMP</name>
+            <archiveVersion>0</archiveVersion>
+            <data />
+        </settings>
+        <settings>
+            <name>BUILDACTION</name>
+            <archiveVersion>1</archiveVersion>
+            <data>
+                <prebuild></prebuild>
+                <postbuild></postbuild>
             </data>
         </settings>
         <settings>
             <name>ILINK</name>
             <archiveVersion>0</archiveVersion>
             <data>
-                <version>28</version>
+                <version>23</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
                     <name>IlinkLibIOConfig</name>
                     <state>1</state>
+                </option>
+                <option>
+                    <name>XLinkMisraHandler</name>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>IlinkInputFileSlave</name>
@@ -2157,53 +2092,13 @@
                     <name>IlinkRawBinaryAlign2</name>
                     <state></state>
                 </option>
-                <option>
-                    <name>IlinkLogCrtRoutineSelection</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkLogFragmentInfo</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkLogInlining</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkLogMerging</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkDemangle</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkWrapperFileEnable</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IlinkWrapperFile</name>
-                    <state></state>
-                </option>
-                <option>
-                    <name>IlinkProcessor</name>
-                    <state>1</state>
-                </option>
-                <option>
-                    <name>IlinkFpuProcessor</name>
-                    <state>1</state>
-                </option>
-                <option>
-                    <name>IlinkSharedSlave</name>
-                    <state>0</state>
-                </option>
             </data>
         </settings>
         <settings>
             <name>IARCHIVE</name>
             <archiveVersion>0</archiveVersion>
             <data>
-                <version>1</version>
+                <version>0</version>
                 <wantNonLocal>1</wantNonLocal>
                 <debug>0</debug>
                 <option>
@@ -2218,19 +2113,11 @@
                     <name>IarchiveOutput</name>
                     <state>###Unitialized###</state>
                 </option>
-                <option>
-                    <name>IarchiveExtraOptionsCheck</name>
-                    <state>0</state>
-                </option>
-                <option>
-                    <name>IarchiveExtraOptions</name>
-                    <state></state>
-                </option>
             </data>
         </settings>
         <settings>
-            <name>BUILDACTION</name>
-            <archiveVersion>2</archiveVersion>
+            <name>BILINK</name>
+            <archiveVersion>0</archiveVersion>
             <data />
         </settings>
     </configuration>
@@ -2249,25 +2136,13 @@
             <name>$PROJ_DIR$\..\..\Sources\Library\mt25tl01g.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Sources\Library\stm32h750b_discovery.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Sources\Library\stm32h750b_discovery_bus.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Sources\Library\stm32h750b_discovery_qspi.c</name>
+            <name>$PROJ_DIR$\..\..\Sources\Library\stm32h747i_eval_qspi.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\Sources\Library\stm32h7xx_hal.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\Sources\Library\stm32h7xx_hal_cortex.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Sources\Library\stm32h7xx_hal_dma.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Sources\Library\stm32h7xx_hal_dma_ex.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\Sources\Library\stm32h7xx_hal_gpio.c</name>
@@ -2291,12 +2166,6 @@
             <name>$PROJ_DIR$\..\..\Sources\Library\stm32h7xx_hal_rcc_ex.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\Sources\Library\stm32h7xx_hal_uart.c</name>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\Sources\Library\stm32h7xx_hal_uart_ex.c</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\..\..\Sources\Library\system_stm32h7xx.c</name>
         </file>
     </group>
@@ -2309,9 +2178,4 @@
             <name>$PROJ_DIR$\..\..\Sources\Loader\Loader_Src.c</name>
         </file>
     </group>
-    <projectSettings>
-        <general>
-            <resolveSourceForBinaries>true</resolveSourceForBinaries>
-        </general>
-    </projectSettings>
 </project>

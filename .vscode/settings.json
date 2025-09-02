@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "mt25tl01g.h": "c",
+        "stm32h7xx.h": "c",
+        "stm32h750b_discovery_qspi.h": "c",
+        "string.h": "c",
+        "stm32h7xx_hal.h": "c"
+    }
+}

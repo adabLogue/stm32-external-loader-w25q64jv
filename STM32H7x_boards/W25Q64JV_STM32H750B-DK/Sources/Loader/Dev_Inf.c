@@ -33,7 +33,7 @@ struct StorageInfo const StorageInfo  =  {
    0x100,                    						// Programming Page Size 256Bytes
    0xFF,                       						// Initial Content of Erased Memory
 // Specify Size and Address of Sectors (view example below)
-   0x00000800, 0x00001000,     				 		// Sector Num : 2048 ,Sector Size: 64KBytes
+   0x00000800, 0x00001000,     				 		// Sector Num : 2048 ,Sector Size: 4KBytes
    0x00000000, 0x00000000,
 }; 
 

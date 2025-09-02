@@ -277,13 +277,13 @@ int32_t MT25TL01G_PageProgram(QSPI_HandleTypeDef *Ctx, MT25TL01G_Interface_t Mod
 
   case MT25TL01G_QPI_MODE: /* 4-4-4 commands */
     s_command.InstructionMode = QSPI_INSTRUCTION_4_LINES;
-    s_command.Instruction = MT25TL01G_QUAD_IN_FAST_PROG_4_BYTE_ADDR_CMD;
+    s_command.Instruction = MT25TL01G_QUAD_IN_FAST_PROG_CMD;
     s_command.AddressMode = QSPI_ADDRESS_4_LINES;
     s_command.DataMode = QSPI_DATA_4_LINES;
     break;
   }
 
-  s_command.AddressSize = QSPI_ADDRESS_32_BITS;
+  s_command.AddressSize = QSPI_ADDRESS_24_BITS;
   s_command.Address = WriteAddr;
   s_command.NbData = Size;
   s_command.AlternateByteMode = QSPI_ALTERNATE_BYTES_NONE;

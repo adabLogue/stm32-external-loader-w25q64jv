@@ -134,7 +134,7 @@ int32_t BSP_QSPI_Init(uint32_t Instance, BSP_QSPI_Init_t *Init)
         /* STM32 QSPI interface initialization */
         (void)MT25TL01G_GetFlashInfo(&pInfo);
         qspi_init.ClockPrescaler = PrescalerTab[Init->TransferRate];
-        qspi_init.DualFlashMode  = QSPI_DUALFLASH_ENABLE;
+        qspi_init.DualFlashMode  = QSPI_DUALFLASH_DISABLE;
         qspi_init.FlashSize      = (uint32_t)POSITION_VAL((uint32_t)pInfo.FlashSize) - 1U;
         qspi_init.SampleShifting = (Init->TransferRate == BSP_QSPI_STR_TRANSFER) ? QSPI_SAMPLE_SHIFTING_HALFCYCLE : QSPI_SAMPLE_SHIFTING_NONE;
 
@@ -150,10 +150,10 @@ int32_t BSP_QSPI_Init(uint32_t Instance, BSP_QSPI_Init_t *Init)
         {
           ret = BSP_ERROR_COMPONENT_FAILURE;
         }
-        else if(MT25TL01G_Enter4BytesAddressMode(&hqspi, QSPI_Ctx[Instance].InterfaceMode) != MT25TL01G_OK)
-        {
-          ret = BSP_ERROR_COMPONENT_FAILURE;
-        }/* Configuration of the dummy cycles on QSPI memory side */
+        // else if(MT25TL01G_Enter4BytesAddressMode(&hqspi, QSPI_Ctx[Instance].InterfaceMode) != MT25TL01G_OK)
+        // {
+        //   ret = BSP_ERROR_COMPONENT_FAILURE;
+        // }/* Configuration of the dummy cycles on QSPI memory side */
         else if(QSPI_DummyCyclesCfg(Instance) != BSP_ERROR_NONE)
         {
           ret = BSP_ERROR_COMPONENT_FAILURE;
