@@ -24,8 +24,6 @@
 #include "stm32h750b_discovery_qspi.h"
 
 
-/* Private variables ---------------------------------------------------------*/
-BSP_QSPI_Init_t Flash;  
 
 /* Private functions ---------------------------------------------------------*/
 KeepInCompilation HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
@@ -64,15 +62,12 @@ int Init()
  /* Configure the system clock to 80 MHz */
  SystemClock_Config();
  /*Initialaize QSPI*/
- Flash.InterfaceMode = BSP_QSPI_QPI_MODE; 
- Flash.TransferRate  = MT25TL01G_STR_TRANSFER;
- Flash.DualFlashMode = BSP_QSPI_DUALFLASH_DISABLE;
  HAL_RCC_MCOConfig(RCC_MCO1, RCC_MCO1SOURCE_HSE, RCC_MCODIV_1); 
- if(BSP_QSPI_Init(0,&Flash) !=0)
+ if(BSP_QSPI_Init() !=0)
    return 0;
-  result = BSP_QSPI_EnableMemoryMappedMode(0);  
-  if(result!=0)
-    return result;
+  // result = BSP_QSPI_EnableMemoryMappedMode(0);  
+  // if(result!=0)
+  //   return result;
 
 
   return 1;
@@ -89,9 +84,9 @@ int Init()
 KeepInCompilation int Write (uint32_t Address, uint32_t Size, uint8_t* buffer)
 {
     Address = Address & 0x0fffffff;
-    BSP_QSPI_Init(0,&Flash);
+    BSP_QSPI_Init();
     /*Writes an amount of data to the OSPI memory.*/
-    BSP_QSPI_Write(0,buffer,Address, Size);
+    BSP_QSPI_Write(buffer,Address, Size);
     return 1;
 }
 
@@ -103,11 +98,11 @@ KeepInCompilation int Write (uint32_t Address, uint32_t Size, uint8_t* buffer)
   */
 KeepInCompilation  int MassErase (uint32_t Parallelism ){
 
-  BSP_QSPI_Init(0,&Flash);
+  BSP_QSPI_Init();
   /*Erases the entire OSPI memory*/
-  BSP_QSPI_EraseChip(0);
+  BSP_QSPI_Erase_Chip();
   /*Reads current status of the QSPI memory*/
-  while (BSP_QSPI_GetStatus(0)!=0);
+  while (BSP_QSPI_GetStatus()!=0);
   return 1;  
 }
 
@@ -122,16 +117,16 @@ KeepInCompilation int SectorErase (uint32_t EraseStartAddress ,uint32_t EraseEnd
   uint32_t BlockAddr;
   EraseStartAddress = EraseStartAddress & 0x0FFFFFFF;  
   EraseEndAddress &= 0x0FFFFFFF;
-  EraseStartAddress = EraseStartAddress -  EraseStartAddress % 0x10000;
-  BSP_QSPI_Init(0,&Flash);
+  EraseStartAddress = EraseStartAddress -  EraseStartAddress % 0x1000; // 4kb sectors erase 
+  BSP_QSPI_Init();
   while (EraseEndAddress>=EraseStartAddress)
   {
     BlockAddr = EraseStartAddress;
     /*Erases the specified block of the OSPI memory*/
-     BSP_QSPI_EraseBlock(0,BlockAddr,  BSP_QSPI_ERASE_64K);
+     BSP_QSPI_Erase_Block(BlockAddr);
     /*Reads current status of the OSPI memory*/
-    while (BSP_QSPI_GetStatus(0)!=0);
-      EraseStartAddress+=0x10000;
+    while (BSP_QSPI_GetStatus()!=0);
+      EraseStartAddress+=0x1000;  // 4kb sector erase at a time
   }
   
   return 1;
